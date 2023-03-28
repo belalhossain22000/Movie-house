@@ -1,0 +1,55 @@
+.movie-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-top: 20px;
+    /* padding: 1rem; */
+    width: 100%;
+
+
+}
+
+.movie-card-container {
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.summery-container {
+    background-color:rgba(255, 99, 71, 0.55);
+    position: sticky;
+    top: 0px;
+    text-align: center;
+}
+.watchTime{
+    padding: 10px;
+    border: 1px solidrgba(255, 99, 71, 0.55);
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+}
+.btn-timmer{
+    padding: px;
+    margin: 10px;
+    /* bottom: 0px;
+    width: 80%; */
+   background-color:  rgba(255, 99, 71, 0.677);
+   color: white;
+}
+.btn-timmer:hover{
+    background-color: white;
+    color:  rgba(255, 99, 71, 0.677);
+}
+.compleat-btn{
+    width: 100%;
+    margin-top: 30px;
+    font-weight: bold;
+    color: white;
+    background-color:  rgba(255, 99, 71, 0.677);
+}
+.compleat-btn:hover{
+    background-color: white;
+    color:  rgba(255, 99, 71, 0.377);
+}
