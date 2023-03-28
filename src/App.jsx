@@ -6,6 +6,8 @@ import './index.css';
 
 import Header from './component/Header/Header'
 import Movie from './component/Movie/Movie';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 function App() {
   const [count, setCount] = useState(0)

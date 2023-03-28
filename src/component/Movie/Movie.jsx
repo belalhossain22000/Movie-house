@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import "./Movie.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const Movie = () => {
+
   const [movies, setMovies] = useState([]);
   const [watchtime, seWatchtime] = useState(0);
   const [breakTime,setBreakTime]=useState(0)
+  const notify = () => toast("Wow You Are Compleategit !");
+
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
@@ -46,7 +53,8 @@ const Movie = () => {
         <button onClick={()=>handleBreakTimw(20)} className="btn-timmer">20</button>
         <button onClick={()=>handleBreakTimw(25)} className="btn-timmer">25</button>
         <input className="watchTime" type="text" value={breakTime} />
-        <button className="compleat-btn">Compleate</button>
+        <button onClick={notify} className="compleat-btn">Compleate</button>
+        <ToastContainer />
       </div>
     </div>
   );
