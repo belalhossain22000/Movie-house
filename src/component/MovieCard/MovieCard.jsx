@@ -1,8 +1,8 @@
 import React from "react";
 import "./MovieCard.css";
 
-const MovieCard = ({ movie }) => {
-  console.log(movie);
+const MovieCard = ({ movie,handleWatchTime }) => {
+//   console.log(movie);
   const { movieName, poster, watchTime, imdbRating, description } = movie;
   return (
     <div className="card">
@@ -17,7 +17,7 @@ const MovieCard = ({ movie }) => {
           <p>Rating :{imdbRating}</p>
         </div>
       </div>
-      <button className="book-btn">Book Now</button>
+      <button onClick={()=>handleWatchTime(watchTime)} className="book-btn">Book Now</button>
     </div>
   );
 };
