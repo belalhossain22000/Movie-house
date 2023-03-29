@@ -7,17 +7,22 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Movie = () => {
+  const getDAata=(key)=>{
+    const value = localStorage.getItem(key);
+    return(JSON.parse(value)?JSON.parse(value):0);
+}
 
   const [movies, setMovies] = useState([]);
-  const [watchtime, seWatchtime] = useState(0);
-  const [breakTime,setBreakTime]=useState(0)
-  const notify = () => toast("Wow You Are Compleategit !");
+  const [watchtime, seWatchtime] = useState(getDAata('watchTime'));
+  const [breakTime,setBreakTime]=useState(getDAata('breakTime'))
+  const notify = () => toast("Wow You Are Compleated!!!");
 
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
       .then((data) => setMovies(data));
   }, []);
+ 
   const handleWatchTime = (watchTimes) => {
     const previousWatchTime = JSON.parse(localStorage.getItem("watchTime"));
     if (previousWatchTime) {
